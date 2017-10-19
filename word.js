@@ -1,8 +1,12 @@
-var fs = "fs" ;
-var inquirer = require("inquirer");
-var Letter = require("Letter");
+// verify connection to wordjs
+console.log("connected to WordJS");
 
-function Word(){
+var fs = require("fs") ;
+var inquirer = require("inquirer");
+
+
+
+var word = function (){
 	this.word = word;
 	this.numLetter = numLetter;
 	this.wordLetters = wordLetters;
@@ -18,4 +22,4 @@ function Word(){
 
 var wordArray = ["Tesla", "Mercedes", "Lexus", "Toyota", "Ferrari", "Chrysler", "Maybach", "Volkswagen"]
 
-module.exports = {Word, wordArray}
+module.exports = {word, wordArray}

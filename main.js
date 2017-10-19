@@ -1,11 +1,11 @@
 var fs = require ("fs");
-var Letter = require("./letter");
-var Word = require("./word");
+var Letter = require("./letter.js");
+var word = require("./word.js");
 var inquirer = require("inquirer")
 
 
 console.log("Welcome to Hangman by Node !!! (The Auto-Maker Version)");
-console.log("_____________________________");
+console.log("--------------------------------------------------------");
 
 
 
@@ -31,7 +31,7 @@ inquirer.prompt([
 
 if (guessed === 0){
 	console.log("That letter isnt in this word");
-	this.attempts --,
+	this.attempts --;
 } else {
 	console.log("Nice, Guess another letter")
 }

@@ -1,0 +1,23 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "Hangman with Node.js",
+  "main": "main.js",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theycallmeflowz/hangman-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theycallmeflowz/hangman-cli/issues"
+  },
+  "homepage": "https://github.com/theycallmeflowz/hangman-cli#readme"
+}
