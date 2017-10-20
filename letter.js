@@ -10,15 +10,14 @@ var inquirer = require("inquirer");
 function Letter()
 {
     this.letter = letter;
+    this.shown = false;
     this.guessedLetters = guessedLetters;
-    this.display = function (){
-        if (this.guessed){
-            return this.letter
-        } else {
-            return "_";
-        }
-    }
-}
+    this.initialWord = function (){
+    
+            return !(this.shown)? "_" : this.letter;
+        
+    };
+};
 
 
 

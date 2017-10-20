@@ -20,6 +20,6 @@ var word = function (){
 
 }
 
-var wordArray = ["Tesla", "Mercedes", "Lexus", "Toyota", "Ferrari", "Chrysler", "Maybach", "Volkswagen"]
+var wordArray = ["Tesla", "Mercedes", "Lexus", "Toyota", "Ferrari", "Chrysler", "Maybach", "Volkswagen"];
 
-module.exports = {word, wordArray}
+module.exports = {word, wordArray};
