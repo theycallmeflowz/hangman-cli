@@ -9,18 +9,14 @@ console.log("--------------------------------------------------------"+"\n");
 
 
 var wordArray = ["Tesla", "Mercedes", "Lexus", "Toyota", "Ferrari", "Chrysler", "Maybach", "Volkswagen"]
-// variable holds a number of blanks left
-var numberBlanks;
 
 
-var wrongGuesses = [];
-var lossCounter = 0;
 
+function start(){ 
 
 var tesla = ["t", "e", "s", "l", "a"];
 var displayedWord = ["t", "e", "_", "_", "_"];
 console.log(displayedWord);
-var guessedLetters = [];
 var initialWord = ["t", "e"]
 
 
@@ -40,27 +36,71 @@ inquirer.prompt([
 		message:"Choose Another One"
 	}
 	]).then(function game (answer){
-		guessedLetters.push(answer.guessedLetters1,answer.guessedLetters2,answer.guessedLetters3);
 		
-		var finalWord = initialWord.concat(guessedLetters);
+		initialWord.push(answer.guessedLetters1,answer.guessedLetters2,answer.guessedLetters3);
 
-		if (finalWord = tesla){
-			console.log("Word is " + wordArray[0] + ", Good Job");
+		// var finalWord = initialWord.concat(guessedLetters);
+
+		if (JSON.stringify(initialWord) == JSON.stringify(tesla)){
+			console.log("The Word is " + wordArray[0] + ", Good Job");
 		} else {
-			console.log("no words");
+			console.log("You Guessed Wrong" + "\n");
 		}
 
-		console.log(finalWord);
-		// console.log(tesla);
-
-		
+		secondWord();
+	
 	})
 
+}
 
 
-// if (guessed === 0){
-// 	console.log("That letter isnt in this word");
-// 	this.attempts --;
-// } else {
-// 	console.log("Nice, Guess another letter")
-// }
+function secondWord (){
+
+console.log("\n")
+console.log("**************NEXT WORD******************");
+console.log("-----------------------------------------" + "\n")
+
+var mercedes = ["m", "e", "r", "c", "e", "d", "e", "s"];
+var displayedWord = ["m", "e", "r", "c", "_", "_", "_", "_"];
+console.log(displayedWord);
+var initialWord = ["m", "e", "r", "c"];
+
+
+inquirer.prompt([
+	{
+		type:"input",
+		name:"guessedLetters1",
+		message:"Choose a letter",
+
+	},{
+		type:"input",
+		name:"guessedLetters2",
+		message:"Choose another letter",
+	},{
+		type:"input",
+		name:"guessedLetters3",
+		message:"Choose Another One",
+	},{
+		type:"input",
+		name:"guessedLetters4",
+		message:"And The Last Guess"
+	}
+	]).then(function game (answer){
+		
+		initialWord.push(answer.guessedLetters1,answer.guessedLetters2,answer.guessedLetters3,answer.guessedLetters4);
+
+		// var finalWord = initialWord.concat(guessedLetters);
+
+		if (JSON.stringify(initialWord) == JSON.stringify(mercedes)){
+			console.log("The Word is " + wordArray[1] + ", Good Job");
+		} else {
+			console.log("You Guessed Wrong" + "\n");
+		}
+	
+	})
+
+}
+
+start();
+
+
